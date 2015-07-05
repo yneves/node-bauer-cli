@@ -1,0 +1,40 @@
+{
+  "name": "bauer-cli",
+  "version": "0.1.0",
+  "description": "Command-line interface for bauer-crawler.",
+  "keywords": [
+    "multi-thread",
+    "multi-core",
+    "process",
+    "fork",
+    "multi-process",
+    "cluster",
+    "crawler",
+    "scrape",
+    "scraper"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yneves/node-bauer-cli",
+  "author": {
+    "name": "Yuri Neves Silveira",
+    "url": "http://yneves.com/",
+    "email": "npm@yneves.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yneves/node-bauer-cli.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "bauer": "./bauer-cli.js"
+  },
+  "devDependencies": {
+    "mocha": ">=1.0.0"
+  },
+  "dependencies": {
+    "bauer-factory": "^2.0.3"
+  },
+  "main": "lib/index.js"
+}
