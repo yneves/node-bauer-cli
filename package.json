@@ -1,6 +1,6 @@
 {
   "name": "bauer-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command-line interface for bauer-crawler.",
   "keywords": [
     "multi-thread",
@@ -34,7 +34,6 @@
     "mocha": ">=1.0.0"
   },
   "dependencies": {
-    "bauer-factory": "^2.0.3"
   },
   "main": "lib/index.js"
 }
