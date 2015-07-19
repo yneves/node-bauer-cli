@@ -34,6 +34,7 @@
     "mocha": ">=1.0.0"
   },
   "dependencies": {
+    "npm": "^2.13.1"
   },
   "main": "lib/index.js"
 }
