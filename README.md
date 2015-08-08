@@ -112,11 +112,9 @@ module.exports = {
   promise: {
     
     doSomething: function() {
-      return this.then(function(value) {
-        return this.requestWorker("doSomething",{
-          input: value
-        }).get("output");
-      })
+      return this.requestWorker("doSomething",{
+        input: value
+      }).get("output");
     }
   }
   
