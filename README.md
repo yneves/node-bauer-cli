@@ -16,12 +16,13 @@ This is a command line tool, therefore it must be installed globally.
 
 ## Bauer Script
 
-A bauer script is just a node module that exports a function, which is called having a `Promise` as only argument. The context variable is a `bauer-crawler` instance. The function should return a `Promise` that tells the script to end or repeat when its resolved. It uses `bluebird` promise implementation extended with features from loaded plugins.
+A bauer script is a node module that exports a function. The context variable is a `bauer-crawler` instance, which provides `.promise` method to start a promise chain. The function should return a `Promise` that tells the script to end or repeat when its resolved. It uses `bluebird` promise implementation extended with features from loaded plugins.
 
 ```js
-module.exports = function(promise) {
+module.exports = function() {
   
-  return promise.fetch("http://http-bin.org")
+  return this.promise()
+    .fetch("http://http-bin.org")
     .scrape({
       "a[href]": {
         links: {
@@ -41,7 +42,8 @@ module.exports = function(promise) {
     })
     .catch(function(error) {
       console.log('something wrong happened',error);
-    });
+    })
+    .repeat();
 };
 ```
 

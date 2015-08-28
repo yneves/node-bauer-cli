@@ -1,6 +1,6 @@
 {
   "name": "bauer-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Command-line interface for bauer-crawler.",
   "keywords": [
     "multi-thread",
