@@ -10,11 +10,11 @@
 "use strict";
 
 var cli = require("./lib/index.js");
-
-var cmd = process.argv[2];
+var args = process.argv.slice(2);
+var cmd = args.length ? args.shift() : "run";
 
 if (cli[cmd]) {
-  cli[cmd]();
+  cli[cmd].apply(cli,args);
 } else {
   throw new Error("unknown command");
 }

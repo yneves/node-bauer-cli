@@ -21,7 +21,7 @@ A bauer script is a node module that exports a function. The context variable is
 ```js
 module.exports = function() {
   
-  return this.promise()
+  return this.Promise
     .fetch("http://http-bin.org")
     .scrape({
       "a[href]": {
@@ -34,7 +34,7 @@ module.exports = function() {
     .extract("$..url")
     .map(function(url) {
       
-      return this.promise()
+      return this.Promise
         .fetch(url)
         .then(function() {
           
@@ -53,9 +53,9 @@ The `package.json` file contains list of plugins to load and its configurations,
 {
   "name": "bauer-project",
   "plugins": [
-    "bauer-crawler-fetch",
-    "bauer-crawler-scrape",
-    "bauer-crawler-extract"
+    "bauer-plugin-fetch",
+    "bauer-plugin-scrape",
+    "bauer-plugin-extract"
   ],
   "config": {
     "fetch": {
@@ -69,9 +69,9 @@ The `package.json` file contains list of plugins to load and its configurations,
     }
   },
   "dependencies": {
-    "bauer-crawler-fetch": "*",
-    "bauer-crawler-scrape": "*",
-    "bauer-crawler-extract": "*"
+    "bauer-plugin-fetch": "*",
+    "bauer-plugin-scrape": "*",
+    "bauer-plugin-extract": "*"
   }
 }
 ```
