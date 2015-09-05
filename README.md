@@ -9,7 +9,8 @@ This is a command line tool, therefore it must be installed globally.
 
 ## Usage
 
- * `bauer new` - Creates a new bauer script inside an empty directory.
+ * `bauer init script` - Creates a new bauer script using an yeoman generator `generator-bauer-script`.
+ * `bauer init plugin` - Creates a new bauer plugin using an yeoman generator `generator-bauer-plugin`.
  * `bauer run` - Run the bauer script in the current directory.
  * `bauer add [PLUGIN]` - Adds a plugin to the bauer script in the current directory.
  * `bauer remove [PLUGIN]` - Removes a plugin from the bauer script in the current directory.
