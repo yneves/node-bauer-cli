@@ -1,6 +1,6 @@
 {
   "name": "bauer-cli",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Command-line interface for bauer-crawler.",
   "keywords": [
     "multi-thread",
@@ -34,9 +34,9 @@
     "mocha": ">=1.0.0"
   },
   "dependencies": {
-    "generator-bauer-plugin": "*",
-    "generator-bauer-script": "*",
-    "npm": "^3.3.2",
+    "generator-bauer-plugin": "^0.1.2",
+    "generator-bauer-script": "^0.1.1",
+    "npm": "^3.3.3",
     "yeoman-environment": "*"
   },
   "main": "lib/index.js"
